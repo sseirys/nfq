@@ -14,7 +14,6 @@ class Eshop extends CI_Controller {
 		 $invalid = array();
 
 		 $data['quantity'] = (int)$this->input->post('quantity');
-		 $data['unit_price'] = $this->input->post('unit_price');
 		 $data['customer'] = $this->input->post('customer');
 		 $data['city'] = $this->input->post('city');
 		 $data['address'] = $this->input->post('address');

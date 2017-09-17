@@ -16,7 +16,7 @@
     <div class="container">
       	<div class="row">
 			<h3>Užsakymo forma</h3>
-			<form id="order-data">				
+			<form id="order-data">			
 				<table>
 					<tr>
 						<td><span class="validation-field" id="quantity_validation"></span>Kiekis: </td><td><input type="text" name="quantity" /></td>
@@ -109,11 +109,10 @@ $("#accepted-order").click(function(e) {
 });
 $("#submit-form").click(function(e) {
 	//apibreziami visi formos laukai
-	var fields = ['quantity', 'customer', 'city', 'address', 'email', 'tel_nr']
+	var fields = ['quantity', 'customer', 'city', 'address', 'email', 'tel_nr'];
 	
 	//istrinamos praeitos validacijos klaidos
 	$.each(fields, function(index, value) {
-			console.log(value)
 			$("#"+value+"_validation").html("");
 		});
 
@@ -128,7 +127,6 @@ $("#submit-form").click(function(e) {
 			}
 			else{
 				$.each(data.errors, function(index, value) {
-					console.log(value)
 					$("#"+value+"_validation").html("Klaida");
 				});
 			}
