@@ -5,7 +5,7 @@ class Admin extends CI_Controller {
 
 	public function orders()
 	{
-        $per_page = 2;
+        $per_page = 10;
 
         $this->load->model('orders');
         $this->load->library('pagination');
